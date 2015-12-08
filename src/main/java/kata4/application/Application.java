@@ -17,7 +17,7 @@ import static java.util.Arrays.stream;
 public class Application {
 
     public static void main(String[] args) throws SQLException {
-        Person[] people = new DatabasePersonLoader(createConnection("people.db")).load();
+        Person[] people = new DatabasePersonLoader(createConnection("src/main/resources/people.db")).load();
         Histogram<String> histogram =  new HistogramBuilder<String>().build(extractDomains(people));
 
         new HistogramDisplay(histogram);
