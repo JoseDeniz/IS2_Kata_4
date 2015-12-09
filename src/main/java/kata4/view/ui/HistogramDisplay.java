@@ -1,4 +1,4 @@
-package kata4.view;
+package kata4.view.ui;
 
 import kata4.model.Histogram;
 import org.jfree.chart.ChartPanel;

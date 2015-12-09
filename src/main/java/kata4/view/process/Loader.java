@@ -1,4 +1,4 @@
-package kata4.process;
+package kata4.view.process;
 
 import kata4.model.Person;
 

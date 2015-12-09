@@ -3,9 +3,9 @@ package kata4.application;
 import kata4.model.Histogram;
 import kata4.model.Mail;
 import kata4.model.Person;
-import kata4.process.DatabasePersonLoader;
-import kata4.process.HistogramBuilder;
-import kata4.view.HistogramDisplay;
+import kata4.view.process.DatabasePersonLoader;
+import kata4.view.process.HistogramBuilder;
+import kata4.view.ui.HistogramDisplay;
 import org.sqlite.JDBC;
 
 import java.sql.Connection;
