@@ -3,9 +3,7 @@ package kata4.application;
 import kata4.model.Histogram;
 import kata4.model.Mail;
 import kata4.model.Person;
-import kata4.view.process.DatabasePersonLoader;
 import kata4.view.process.HistogramBuilder;
-import kata4.view.ui.HistogramDisplay;
 import org.sqlite.JDBC;
 
 import java.sql.Connection;
@@ -20,7 +18,7 @@ public class Application {
         Person[] people = new DatabasePersonLoader(createConnection("src/main/resources/people.db")).load();
         Histogram<String> histogram =  new HistogramBuilder<String>().build(extractDomains(people));
 
-        new HistogramDisplay(histogram);
+        new HistogramDisplay(histogram).display();
     }
 
     private static Connection createConnection(String dbPath) throws SQLException {

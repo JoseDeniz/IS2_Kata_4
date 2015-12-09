@@ -1,6 +1,7 @@
-package kata4.view.ui;
+package kata4.application;
 
 import kata4.model.Histogram;
+import kata4.view.ui.Displayable;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.DefaultCategoryDataset;
@@ -11,7 +12,7 @@ import java.awt.*;
 
 import static org.jfree.chart.ChartFactory.createBarChart;
 
-public class HistogramDisplay extends ApplicationFrame {
+public class HistogramDisplay extends ApplicationFrame implements Displayable {
 
     private Histogram<String> histogram;
 
@@ -21,6 +22,10 @@ public class HistogramDisplay extends ApplicationFrame {
         this.setContentPane(createPanel());
         this.pack();
         this.setLocationRelativeTo(null);
+    }
+
+    @Override
+    public void display() {
         this.setVisible(true);
     }
 

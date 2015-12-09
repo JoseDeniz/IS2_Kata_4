@@ -1,7 +1,8 @@
-package kata4.view.process;
+package kata4.application;
 
 import kata4.model.Mail;
 import kata4.model.Person;
+import kata4.view.process.Loader;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
